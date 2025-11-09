@@ -7,7 +7,7 @@ CIE 标准光源
 
 import numpy as np
 
-from observer_functions import SPD_BUCKETS
+from .observer_functions import SPD_BUCKETS
 
 
 class Illuminant:
