@@ -1,0 +1,27 @@
+[project]
+name = "pigment-trace"
+version = "0.1.0"
+description = "基于Kubelka-Munk理论和神经网络的颜料配方预测"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.9.0",
+    "numpy==2.3.4",
+    "sentencepiece==0.2.1",
+    "tqdm==4.67.1",
+    "pymixbox==2.0.0",
+    "scipy>=1.16.3",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu129" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu129"
+url = "https://download.pytorch.org/whl/cu129"
+explicit = true
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
